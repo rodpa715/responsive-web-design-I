@@ -151,64 +151,108 @@ h5 {
 
 /* Copy and paste your work from yesterday here and start to refactor into flexbox */
 
-.container{
+.container {
   display: flex;
   flex-wrap: wrap;
   flex-direction: column;
 }
+@media(min-width: 1080px){
+  .container{
+    max-width: 876px;
+    margin: 0 auto;
+  }
+}
 
-.container img{
+.container p{
+  line-height: 1.25;
+}
+.container img {
   align-self: center;
   margin: 2rem;
 }
 
-.container nav{
+.container nav {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
 }
-
-.container nav a{
-  padding: 1rem 100%;
-  border-bottom: 1px solid darkgray;
-  font-weight: 600;
+@media (min-width: 768px) {
+  .container nav {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+  }
 }
-.container nav a:first-child{
+.container nav a {
+  padding: 1rem;
+  width: 100%;
+  text-align: center;
+  border-bottom: 1px solid darkgray;
+}
+.container nav a:first-child {
   border-top: 1px solid darkgray;
 }
 
-.container a{
-  color: silver;
+@media (min-width: 768px) {
+  .container nav a {
+    padding: 0px 0px;
+    border-bottom: none;
+  }
+  .container nav a:first-child {
+    border-top: none;
+  }
+}
+.container a {
+  color: gray;
   text-decoration: none;
+  font-weight: 600;
+  font-size: 1.2rem
 }
 
-.container header{
+.container header {
   margin: 3rem 0;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
 }
-
-.container header img{
+@media (min-width: 768px){
+  .container header {
+    margin: 4rem;
+  }
+}
+.container header img {
   display: none;
 }
-
-.container header h1{
+@media(min-width: 1080px){
+  .container header{
+    display: flex;
+    flex-direction: row;
+  }
+  .container header img {
+    display: unset;
+  }
+}
+.container header h1 {
   font-size: 4rem;
   text-align: center;
 }
-
-.container header button{
+.container div.slogan{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.container header button {
   width: 175px;
   height: 2rem;
   background-color: white;
   border: 1px solid black;
   font-weight: 500;
-  font-size: 1.1rem
+  font-size: 1.2rem;
+  
 }
-.main-content{
+.main-content {
   width: 90%;
   margin: 0 auto;
   display: flex;
@@ -219,25 +263,48 @@ h5 {
   border-bottom: 2px solid black;
 }
 
-.main-content div{
+.main-content div {
   margin: 1.75rem 0;
 }
 
-.main-content img{
+.main-content img {
   width: 100%;
 }
-
-address{
-  padding-top: 1.75rem;
+@media (min-width: 768px) {
+  .main-content {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+  .main-content div {
+    width: 50%;
+  }
+  .main-content img {
+    width: 100%;
+    margin: 0;
+    align-self: flex-start;
+  }
+  .main-content section {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  .main-content section div{
+    width: 33%;
+  }
+}
+address {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
   justify-content: center;
   width: 90%;
-  margin: 0 auto;
+  margin: 2rem auto;
 }
-
-.container p.copyright{
+.container address p:nth-child(4) {
+	margin: 1rem 0;
+}
+.container p.copyright {
   text-align: center;
-  margin: 1rem;
+  margin-bottom: 1rem;
 }
