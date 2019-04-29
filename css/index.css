@@ -78,6 +78,18 @@ h1, h2, h3, h4, h5 {
   align-items: center;
   margin: 2rem 0;
 }
+@media (max-width: 800px){
+  .container{
+    display: flex;
+    flex-direction: column;
+  }
+  .container section {
+  margin: 2rem 0;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  }
+}
 
 .container section nav{
   display: flex;
@@ -85,11 +97,20 @@ h1, h2, h3, h4, h5 {
   align-items: center;
   width: 100%;
 }
+
 .container a {
   color: silver;
   text-decoration: none;
   font-weight: 600;
   font-size: 1rem;
+}
+@media (max-width: 800px){
+  .container section nav{
+    margin: 2rem 0;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+  }
 }
 .container header h1 {
   font-size: 4rem;
@@ -101,6 +122,15 @@ h1, h2, h3, h4, h5 {
   flex-direction: row;
   justify-content: center;
   align-items: center;
+}
+@media (max-width: 800px){
+  .container header{
+    margin-top: 0rem;
+    margin-bottom: 4rem;
+  }
+  .container header img{
+    display: none;
+  }
 }
 .container div.slogan {
   display: flex;
