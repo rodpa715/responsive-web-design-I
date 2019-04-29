@@ -3,68 +3,154 @@
    License: none (public domain)
 */
 
-html, body, div, span, applet, object, iframe,
-h1, h2, h3, h4, h5, h6, p, blockquote, pre,
-a, abbr, acronym, address, big, cite, code,
-del, dfn, em, img, ins, kbd, q, s, samp,
-small, strike, strong, sub, sup, tt, var,
-b, u, i, center,
-dl, dt, dd, ol, ul, li,
-fieldset, form, label, legend,
-table, caption, tbody, tfoot, thead, tr, th, td,
-article, aside, canvas, details, embed, 
-figure, figcaption, footer, header, hgroup, 
-menu, nav, output, ruby, section, summary,
-time, mark, audio, video {
-	margin: 0;
-	padding: 0;
-	border: 0;
-	font-size: 100%;
-	font: inherit;
-	vertical-align: baseline;
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
 }
 /* HTML5 display-role reset for older browsers */
-article, aside, details, figcaption, figure, 
-footer, header, hgroup, menu, nav, section {
-	display: block;
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
 }
 body {
-	line-height: 1;
+  line-height: 1;
 }
-ol, ul {
-	list-style: none;
+ol,
+ul {
+  list-style: none;
 }
-blockquote, q {
-	quotes: none;
+blockquote,
+q {
+  quotes: none;
 }
-blockquote:before, blockquote:after,
-q:before, q:after {
-	content: '';
-	content: none;
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: "";
+  content: none;
 }
 table {
-	border-collapse: collapse;
-	border-spacing: 0;
+  border-collapse: collapse;
+  border-spacing: 0;
 }
 
 /* Set every element's box-sizing to border-box */
 * {
-    box-sizing: border-box;
+  box-sizing: border-box;
 }
 
-html, body {
-    height: 100%;
-    font-family: 'Titillium Web', sans-serif;
+html,
+body {
+  height: 100%;
+  font-family: "Titillium Web", sans-serif;
 }
 
-h1, h2, h3, h4, h5 {
-    font-family: 'Bangers', cursive;
-    letter-spacing: 1px;
-    margin-bottom: 15px;
+h1,
+h2,
+h3,
+h4,
+h5 {
+  font-family: "Bangers", cursive;
+  letter-spacing: 1px;
+  margin-bottom: 15px;
 }
 
 /* Copy and paste your work from yesterday here and start to refactor into flexbox */
-.container{
+.container {
   max-width: 876px;
   margin: 0 auto;
 }
@@ -78,24 +164,44 @@ h1, h2, h3, h4, h5 {
   align-items: center;
   margin: 2rem 0;
 }
-@media (max-width: 800px){
-  .container{
+@media (max-width: 800px) {
+  .container {
     display: flex;
     flex-direction: column;
   }
   .container section {
-  margin: 2rem 0;
-  flex-direction: row;
-  flex-wrap: wrap;
-  justify-content: center;
+    margin: 2rem 0;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
   }
 }
 
-.container section nav{
+.container section nav {
   display: flex;
   justify-content: space-around;
   align-items: center;
   width: 100%;
+}
+
+@media (max-width: 500px) {
+  .container section{
+    margin: 1rem 0;
+  }
+
+  .container section nav {
+    flex-direction: column;
+  }
+  .container section a:first-of-type {
+    border-top: 1px solid gray;
+  }
+  .container section a {
+    width: 100%;
+    text-align: center;
+    padding: 1rem 0;
+    font-size: 1.2rem;
+    border-bottom: 1px solid grey;
+  }
 }
 
 .container a {
@@ -104,9 +210,9 @@ h1, h2, h3, h4, h5 {
   font-weight: 600;
   font-size: 1rem;
 }
-@media (max-width: 800px){
-  .container section nav{
-    margin: 2rem 0;
+@media (max-width: 800px) {
+  .container section nav {
+    margin: 1rem 0;
     justify-content: space-around;
     align-items: center;
     width: 100%;
@@ -123,12 +229,12 @@ h1, h2, h3, h4, h5 {
   justify-content: center;
   align-items: center;
 }
-@media (max-width: 800px){
-  .container header{
+@media (max-width: 800px) {
+  .container header {
     margin-top: 0rem;
     margin-bottom: 4rem;
   }
-  .container header img{
+  .container header img {
     display: none;
   }
 }
@@ -150,16 +256,26 @@ h1, h2, h3, h4, h5 {
   width: 90%;
   margin: 0 auto;
   display: flex;
-  flex-direction: row;
   flex-wrap: wrap;
   justify-content: space-between;
   align-content: center;
   border-top: 2px solid black;
   border-bottom: 2px solid black;
 }
+@media (max-width: 500px) {
+  .main-content {
+    flex-direction: column;
+  }
+}
 .main-content div {
   width: 50%;
   margin: 1.75rem 0;
+}
+@media (max-width: 500px) {
+  .main-content div {
+    width: 100%;
+    margin: 1.25rem 0;
+  }
 }
 .main-content img {
   width: 100%;
@@ -171,9 +287,20 @@ h1, h2, h3, h4, h5 {
   flex-direction: row;
   justify-content: space-between;
 }
+
 .main-content section div {
   margin: 0;
   width: 33%;
+}
+@media (max-width: 500px) {
+  .main-content section {
+    flex-direction: column;
+    align-content: flex-start;
+  }
+  .main-content section div {
+    margin: 0.75rem 0;
+    width: 100%;
+  }
 }
 address {
   display: flex;
@@ -189,4 +316,4 @@ address {
 .container p.copyright {
   text-align: center;
   margin-bottom: 1rem;
-} 
+}
