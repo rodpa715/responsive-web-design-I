@@ -1,266 +1,114 @@
-/* http://meyerweb.com/eric/tools/css/reset/ 
+/* Copy and paste your work from yesterday here and start to refactor into flexbox */
+
+./* http://meyerweb.com/eric/tools/css/reset/ 
    v2.0 | 20110126
    License: none (public domain)
 */
 
-html,
-body,
-div,
-span,
-applet,
-object,
-iframe,
-h1,
-h2,
-h3,
-h4,
-h5,
-h6,
-p,
-blockquote,
-pre,
-a,
-abbr,
-acronym,
-address,
-big,
-cite,
-code,
-del,
-dfn,
-em,
-img,
-ins,
-kbd,
-q,
-s,
-samp,
-small,
-strike,
-strong,
-sub,
-sup,
-tt,
-var,
-b,
-u,
-i,
-center,
-dl,
-dt,
-dd,
-ol,
-ul,
-li,
-fieldset,
-form,
-label,
-legend,
-table,
-caption,
-tbody,
-tfoot,
-thead,
-tr,
-th,
-td,
-article,
-aside,
-canvas,
-details,
-embed,
-figure,
-figcaption,
-footer,
-header,
-hgroup,
-menu,
-nav,
-output,
-ruby,
-section,
-summary,
-time,
-mark,
-audio,
-video {
-  margin: 0;
-  padding: 0;
-  border: 0;
-  font-size: 100%;
-  font: inherit;
-  vertical-align: baseline;
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {gi
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
 }
 /* HTML5 display-role reset for older browsers */
-article,
-aside,
-details,
-figcaption,
-figure,
-footer,
-header,
-hgroup,
-menu,
-nav,
-section {
-  display: block;
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
 }
 body {
-  line-height: 1;
+	line-height: 1;
 }
-ol,
-ul {
-  list-style: none;
+ol, ul {
+	list-style: none;
 }
-blockquote,
-q {
-  quotes: none;
+blockquote, q {
+	quotes: none;
 }
-blockquote:before,
-blockquote:after,
-q:before,
-q:after {
-  content: "";
-  content: none;
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
 }
 table {
-  border-collapse: collapse;
-  border-spacing: 0;
+	border-collapse: collapse;
+	border-spacing: 0;
 }
 
 /* Set every element's box-sizing to border-box */
 * {
-  box-sizing: border-box;
+    box-sizing: border-box;
 }
 
-html,
-body {
-  height: 100%;
-  font-family: "Titillium Web", sans-serif;
+html, body {
+    height: 100%;
+    font-family: 'Titillium Web', sans-serif;
 }
 
-h1,
-h2,
-h3,
-h4,
-h5 {
-  font-family: "Bangers", cursive;
-  letter-spacing: 1px;
-  margin-bottom: 15px;
+h1, h2, h3, h4, h5 {
+    font-family: 'Bangers', cursive;
+    letter-spacing: 1px;
+    margin-bottom: 15px;
 }
 
 /* Copy and paste your work from yesterday here and start to refactor into flexbox */
-
-.container {
-  display: flex;
-  flex-wrap: wrap;
-  flex-direction: column;
+.container{
+  max-width: 876px;
+  margin: 0 auto;
 }
-@media (min-width: 1050px) {
-  .container {
-    max-width: 876px;
-    margin: 0 auto;
-  }
-}
-
 .container p {
   line-height: 1.25;
 }
+
 .container section {
   display: flex;
-  flex-direction: column;
-}
-@media (min-width: 1050px) {
-  .container section {
-    flex-direction: row-reverse;
-  }
-}
-.container img {
-  align-self: center;
-  margin: 2rem;
-}
-
-.container nav {
-  display: flex;
-  flex-direction: column;
+  flex-direction: row-reverse;
   align-items: center;
-  justify-content: center;
-}
-@media (min-width: 768px) {
-  .container nav {
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-around;
-  }
-}
-@media (min-width: 1050px) {
-  .container nav {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-between;
-    width: 100%;
-  }
-}
-.container nav a {
-  padding: 1rem;
-  width: 100%;
-  text-align: center;
-  border-bottom: 1px solid darkgray;
-}
-.container nav a:first-child {
-  border-top: 1px solid darkgray;
+  margin: 2rem 0;
 }
 
-@media (min-width: 768px) {
-  .container nav a {
-    padding: 0px 0px;
-    border-bottom: none;
-  }
-  .container nav a:first-child {
-    border-top: none;
-  }
+.container section nav{
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 100%;
 }
 .container a {
-  color: gray;
+  color: silver;
   text-decoration: none;
   font-weight: 600;
-  font-size: 1.2rem;
-}
-
-.container header {
-  margin: 3rem 0;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-}
-@media (min-width: 768px) {
-  .container header {
-    margin: 4rem 0;
-  }
-}
-.container header img {
-  display: none;
-}
-@media (min-width: 1050px) {
-  .container header {
-    margin: 1rem 0;
-    display: flex;
-    flex-direction: row;
-  }
-  .container header img {
-    display: unset;
-  }
+  font-size: 1rem;
 }
 .container header h1 {
   font-size: 4rem;
   text-align: center;
 }
+.container header {
+  margin: 5rem 0;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
 .container div.slogan {
   display: flex;
   flex-direction: column;
   align-items: center;
+  width: 50%;
 }
 .container header button {
   width: 175px;
@@ -274,42 +122,30 @@ h5 {
   width: 90%;
   margin: 0 auto;
   display: flex;
-  flex-direction: column;
-  justify-content: center;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
   align-content: center;
   border-top: 2px solid black;
   border-bottom: 2px solid black;
 }
-
 .main-content div {
+  width: 50%;
   margin: 1.75rem 0;
 }
-
 .main-content img {
   width: 100%;
+  margin: 0;
+  align-self: flex-start;
 }
-@media (min-width: 768px) {
-  .main-content {
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: space-between;
-  }
-  .main-content div {
-    width: 50%;
-  }
-  .main-content img {
-    width: 100%;
-    margin: 0;
-    align-self: flex-start;
-  }
-  .main-content section {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-  }
-  .main-content section div {
-    width: 33%;
-  }
+.main-content section {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.main-content section div {
+  margin: 0;
+  width: 33%;
 }
 address {
   display: flex;
@@ -325,4 +161,4 @@ address {
 .container p.copyright {
   text-align: center;
   margin-bottom: 1rem;
-}
+} 
