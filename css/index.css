@@ -156,15 +156,24 @@ h5 {
   flex-wrap: wrap;
   flex-direction: column;
 }
-@media(min-width: 1080px){
-  .container{
+@media (min-width: 1050px) {
+  .container {
     max-width: 876px;
     margin: 0 auto;
   }
 }
 
-.container p{
+.container p {
   line-height: 1.25;
+}
+.container section {
+  display: flex;
+  flex-direction: column;
+}
+@media (min-width: 1050px) {
+  .container section {
+    flex-direction: row-reverse;
+  }
 }
 .container img {
   align-self: center;
@@ -182,6 +191,15 @@ h5 {
     flex-direction: row;
     align-items: center;
     justify-content: space-around;
+  }
+}
+@media (min-width: 1050px) {
+  .container nav {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
   }
 }
 .container nav a {
@@ -207,7 +225,7 @@ h5 {
   color: gray;
   text-decoration: none;
   font-weight: 600;
-  font-size: 1.2rem
+  font-size: 1.2rem;
 }
 
 .container header {
@@ -217,16 +235,17 @@ h5 {
   align-items: center;
   justify-content: center;
 }
-@media (min-width: 768px){
+@media (min-width: 768px) {
   .container header {
-    margin: 4rem;
+    margin: 4rem 0;
   }
 }
 .container header img {
   display: none;
 }
-@media(min-width: 1080px){
-  .container header{
+@media (min-width: 1050px) {
+  .container header {
+    margin: 1rem 0;
     display: flex;
     flex-direction: row;
   }
@@ -238,7 +257,7 @@ h5 {
   font-size: 4rem;
   text-align: center;
 }
-.container div.slogan{
+.container div.slogan {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -250,7 +269,6 @@ h5 {
   border: 1px solid black;
   font-weight: 500;
   font-size: 1.2rem;
-  
 }
 .main-content {
   width: 90%;
@@ -289,7 +307,7 @@ h5 {
     flex-direction: row;
     justify-content: space-between;
   }
-  .main-content section div{
+  .main-content section div {
     width: 33%;
   }
 }
@@ -302,7 +320,7 @@ address {
   margin: 2rem auto;
 }
 .container address p:nth-child(4) {
-	margin: 1rem 0;
+  margin: 1rem 0;
 }
 .container p.copyright {
   text-align: center;
