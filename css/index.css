@@ -150,39 +150,36 @@ h5 {
 }
 
 /* Copy and paste your work from yesterday here and start to refactor into flexbox */
-
 .container {
-  display: flex;
-  flex-wrap: wrap;
-  flex-direction: column;
+  max-width: 876px;
+  margin: 0 auto;
 }
-@media (min-width: 1050px) {
-  .container {
-    max-width: 876px;
-    margin: 0 auto;
-  }
-}
-
 .container p {
   line-height: 1.25;
 }
+
 .container section {
   display: flex;
-  flex-direction: column;
+  flex-direction: row-reverse;
+  align-items: center;
+  margin: 2rem 0;
 }
-@media (min-width: 1050px) {
+@media (max-width: 800px) {
+  .container {
+    display: flex;
+    flex-direction: column;
+  }
   .container section {
-    flex-direction: row-reverse;
+    margin: 2rem 0;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
   }
 }
-.container img {
-  align-self: center;
-  margin: 2rem;
-}
 
-.container nav {
+.container section nav {
   display: flex;
-  flex-direction: column;
+  justify-content: space-around;
   align-items: center;
   justify-content: center;
 }
@@ -207,63 +204,67 @@ h5 {
 }
 .container nav a {
   padding: 1rem;
-  width: 100%;
-  text-align: center;
-  border-bottom: 1px solid darkgray;
-}
-.container nav a:first-child {
-  border-top: 1px solid darkgray;
 }
 
-@media (min-width: 768px) {
-  .container nav a {
-    padding: 0px 0px;
-    border-bottom: none;
+@media (max-width: 500px) {
+  .container section{
+    margin: 1rem 0;
   }
-  .container nav a:first-child {
-    border-top: none;
+
+  .container section nav {
+    flex-direction: column;
+  }
+  .container section a:first-of-type {
+    border-top: 1px solid gray;
+  }
+  .container section a {
+    width: 100%;
+    text-align: center;
+    padding: 1rem 0;
+    font-size: 1.2rem;
+    border-bottom: 1px solid grey;
   }
 }
+
 .container a {
-  color: gray;
+  color: silver;
   text-decoration: none;
   font-weight: 500;
   font-size: 1.2rem;
 }
-
-.container header {
-  margin: 3rem 0;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-}
-@media (min-width: 768px) {
-  .container header {
-    margin: 4rem 0;
-  }
-}
-.container header img {
-  display: none;
-}
-@media (min-width: 1050px) {
-  .container header {
+@media (max-width: 800px) {
+  .container section nav {
     margin: 1rem 0;
-    display: flex;
-    flex-direction: row;
-  }
-  .container header img {
-    display: unset;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
   }
 }
 .container header h1 {
   font-size: 4rem;
   text-align: center;
 }
+.container header {
+  margin: 5rem 0;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+@media (max-width: 800px) {
+  .container header {
+    margin-top: 0rem;
+    margin-bottom: 4rem;
+  }
+  .container header img {
+    display: none;
+  }
+}
 .container div.slogan {
   display: flex;
   flex-direction: column;
   align-items: center;
+  width: 50%;
 }
 @media (min-width: 1050px) {
   .container div.slogan {
@@ -282,41 +283,50 @@ h5 {
   width: 90%;
   margin: 0 auto;
   display: flex;
-  flex-direction: column;
-  justify-content: center;
+  flex-wrap: wrap;
+  justify-content: space-between;
   align-content: center;
   border-top: 2px solid black;
   border-bottom: 2px solid black;
 }
-
+@media (max-width: 500px) {
+  .main-content {
+    flex-direction: column;
+  }
+}
 .main-content div {
+  width: 49.5%;
   margin: 1.75rem 0;
 }
-
+@media (max-width: 500px) {
+  .main-content div {
+    width: 100%;
+    margin: 1.25rem 0;
+  }
+}
 .main-content img {
   width: 100%;
+  margin: 0;
+  align-self: flex-start;
 }
-@media (min-width: 768px) {
-  .main-content {
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: space-between;
-  }
-  .main-content div {
-    width: 50%;
-  }
-  .main-content img {
-    width: 100%;
-    margin: 0;
-    align-self: flex-start;
-  }
+.main-content section {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.main-content section div {
+  margin: 0;
+  width: 33%;
+}
+@media (max-width: 500px) {
   .main-content section {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
+    flex-direction: column;
+    align-content: flex-start;
   }
   .main-content section div {
-    width: 33%;
+    margin: 0.75rem 0;
+    width: 100%;
   }
 }
 address {

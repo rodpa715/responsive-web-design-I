@@ -19,6 +19,7 @@ Follow these steps for completing your project.
 - [x] Add your project manager as a reviewer on the pull-request
 - [x] Your project manager will count the project as complete by merging the branch back into master.
 
+
 ## Task 2: Minimum Viable Product
 
 * [x] Review each [design file](design-files).  Notice the subtle differences between them all. 
