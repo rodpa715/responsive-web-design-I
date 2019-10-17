@@ -181,7 +181,29 @@ h5 {
   display: flex;
   justify-content: space-around;
   align-items: center;
-  width: 100%;
+  justify-content: center;
+}
+@media (min-width: 768px) {
+  .container nav {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+  }
+}
+@media (min-width: 1050px) {
+  .container nav {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+  }
+  .container nav a{
+    font-size: 1rem;
+  }
+}
+.container nav a {
+  padding: 1rem;
 }
 
 @media (max-width: 500px) {
@@ -207,8 +229,8 @@ h5 {
 .container a {
   color: silver;
   text-decoration: none;
-  font-weight: 600;
-  font-size: 1rem;
+  font-weight: 500;
+  font-size: 1.2rem;
 }
 @media (max-width: 800px) {
   .container section nav {
@@ -243,6 +265,11 @@ h5 {
   flex-direction: column;
   align-items: center;
   width: 50%;
+}
+@media (min-width: 1050px) {
+  .container div.slogan {
+    width: 50%;
+  }
 }
 .container header button {
   width: 175px;
